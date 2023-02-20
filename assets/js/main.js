@@ -1,0 +1,30 @@
+const allas = ['nyugati', 'Zugló', 'Kőbányi-Kispest', 'Ferihegy', 'Vecsés',
+    'Üllő', 'Monor', 'Monorierdő', 'Pilis', 'Albertirsa', 'Ceglédbercel',
+    'Cegléd', 'Abony', 'Szolnok', 'Szajol', 'Törökszentmikós', 'Fegyvernek-Örményes',
+    'Kisújszállás']
+
+function kiir(megallo) {
+    var p = allas.indexOf(megallo);
+    var r = "";
+    if (p == -1) 
+    {
+        r = "nincs ilyen mrgálló ezen a vonalon"
+    
+    else 
+    {
+        if (p != 0) {
+            r += "Előtte: " + allas[p - 1];
+        }
+        else {
+            r += "előtte: -"
+        }
+        if (p == allas.length - 1) {
+            r += "utánna: -"
+
+        }
+        else {
+            r += "Utánna" + allas[p + 1]
+        }
+        return;
+
+    }
