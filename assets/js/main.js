@@ -4,8 +4,10 @@ const allas = ['nyugati', 'Zugló', 'Kőbányi-Kispest', 'Ferihegy', 'Vecsés',
     'Kisújszállás']
 
 function kiir(megallo) {
-    var p = allas.indexOf(megallo);
+    var p = allas.findIndex(item =>
+        allas.toLowerCase() === item.toLowerCase())
     var r = "";
+
     if (p == -1) 
     {
         r = "nincs ilyen megálló ezen a vonalon"
@@ -34,6 +36,6 @@ return r;
 
     function keres()
     {
-        var anev = document.getElementById("allas").value;
+        var anev = document.getElementById("allask").value.toLowerCase();
         document.getElementById("ered").innerHTML += kiir(anev)
     }
