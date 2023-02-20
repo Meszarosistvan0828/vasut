@@ -8,8 +8,8 @@ function kiir(megallo) {
     var r = "";
     if (p == -1) 
     {
-        r = "nincs ilyen mrgálló ezen a vonalon"
-    
+        r = "nincs ilyen megálló ezen a vonalon"
+    }
     else 
     {
         if (p != 0) {
@@ -18,13 +18,22 @@ function kiir(megallo) {
         else {
             r += "előtte: -"
         }
+        r+="<br>"
+
         if (p == allas.length - 1) {
             r += "utánna: -"
 
         }
         else {
-            r += "Utánna" + allas[p + 1]
+            r += "Utánna: " + allas[p + 1]
         }
-        return;
+    }
+return r;
 
+    }
+
+    function keres()
+    {
+        var anev = document.getElementById("allas").value;
+        document.getElementById("ered").innerHTML += kiir(anev)
     }
