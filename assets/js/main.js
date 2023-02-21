@@ -3,24 +3,31 @@ const allas = ['nyugati', 'Zugló', 'Kőbányi-Kispest', 'Ferihegy', 'Vecsés',
     'Cegléd', 'Abony', 'Szolnok', 'Szajol', 'Törökszentmikós', 'Fegyvernek-Örményes',
     'Kisújszállás']
 
+    var x = document.getElementById("csik");
+    x.max = allas.length-1
+
 function kiir(megallo) {
     var p = allas.findIndex(item =>
-        allas.toLowerCase() === item.toLowerCase())
+        megallo.toLowerCase() === item.toLowerCase())
     var r = "";
 
-    if (p == -1) 
-    {
+    var vonal = document.getElementById("csik");
+    vonal.value = p
+
+  
+
+    document.getElementById("tun").style.display = "flex"
+    if (p == -1) {
         r = "nincs ilyen megálló ezen a vonalon"
     }
-    else 
-    {
+    else {
         if (p != 0) {
             r += "Előtte: " + allas[p - 1];
         }
         else {
             r += "előtte: -"
         }
-        r+="<br>"
+        r += "<br>"
 
         if (p == allas.length - 1) {
             r += "utánna: -"
@@ -30,12 +37,25 @@ function kiir(megallo) {
             r += "Utánna: " + allas[p + 1]
         }
     }
-return r;
+    return r;
 
-    }
+    
 
-    function keres()
-    {
-        var anev = document.getElementById("allask").value.toLowerCase();
-        document.getElementById("ered").innerHTML += kiir(anev)
-    }
+
+
+
+
+}
+
+
+
+
+
+
+
+function keres() {
+    var anev = document.getElementById("allask").value.toLowerCase();
+    document.getElementById("ered").innerHTML = ""
+    document.getElementById("ered").innerHTML += kiir(anev)
+}
+
