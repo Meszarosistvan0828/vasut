@@ -10,13 +10,14 @@ function kiir(megallo) {
     var p = allas.findIndex(item =>
         megallo.toLowerCase() === item.toLowerCase())
     var r = "";
-
+    
     var vonal = document.getElementById("csik");
     vonal.value = p
 
-  
+    var poz = 11800/allas.length
+    document.getElementById("mozog").style.left=poz+"px"
 
-    document.getElementById("tun").style.display = "flex"
+
     if (p == -1) {
         r = "nincs ilyen megálló ezen a vonalon"
     }
@@ -36,23 +37,10 @@ function kiir(megallo) {
         else {
             r += "Utánna: " + allas[p + 1]
         }
+  
     }
     return r;
-
-    
-
-
-
-
-
 }
-
-
-
-
-
-
-
 function keres() {
     var anev = document.getElementById("allask").value.toLowerCase();
     document.getElementById("ered").innerHTML = ""

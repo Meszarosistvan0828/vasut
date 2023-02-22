@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vasut</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <p>Melyik állomáson vagy? </p>
     <p><input type="text" name="" id="allask"></p>
-<p><button onclick="keres()">Keresés</button></p>    
-<p id="ered"></p>
-<p id="tun">itt tart most</p>
-<input type="range" disabled id="csik"  value="0" min="0"  />
+    <p><button onclick="keres()">Keresés</button></p>
+    <p id="ered"></p>
+    <p id="">itt tart most</p>
+    <input type="range" disabled id="csik" value="0" min="0" />
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+
+                <table>
+                    <tr id="">
+                        <td colspan="2">
+                            Nyugati
+                        </td>
+                    <tr>
+                        <td class="balle">
+                            a
+                        </td>
+                        <td class="jobble">
+                            a
+                        </td>
+                    </tr>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="col-md-8 offset-md-1" id="kozep">
+
+                <table id="sin">
+                    <tr >
+                        <td id="sin"  >
+                            <img src="assets/images/fbd27dab32329913d2b68404b400b1aa.png" alt="" id="mozog">
+                        </td>
+                  
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-1 offset-md-1">
+
+                <table>
+                    <tr id="">
+                        <td colspan="2">
+                            Kisújszállás
+                        </td>
+                    <tr>
+                        <td class="balle">
+                            a
+                        </td>
+                        <td class="jobble">
+                            a
+                        </td>
+                    </tr>
+                    </tr>
+                </table>
+
+            </div>
+
+
+        </div>
+
+    </div>
 </body>
+
 </html>
 
 <script src="assets/js/main.js"></script>
